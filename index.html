@@ -15,23 +15,50 @@
 
         <div class="container">
 
-
+            <!-- SIDEBAR -->
             <div class="sidebar">
+                <!-- SIDEBAR HEADER -->
                 <div class="sidebar-header">
                     <div class="user-info">
-                        <div class="propic-wrapper"></div>
+                        <div class="propic-wrapper">
+                            <img src="img/profile-img.jpg" alt="">
+                        </div>
                         <div class="username">Micaela</div>
                     </div>
                     <div class="nav-icons-wrapper">
-                        <div class="nav-icons"></div>
-                        <div class="nav-icons"></div>
-                        <div class="nav-icons"></div>
+                        <div class="nav-icons">
+                            <i class="fa-solid fa-circle-notch"></i>
+                        </div>
+                        <div class="nav-icons">
+                            <i class="fa-solid fa-comment"></i>
+                        </div>
+                        <div class="nav-icons">
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
                     </div>
-
-
                 </div>
-                <div class="sidebar-searchbar"></div>
-                <div class="sidebar-contacts"></div>
+
+                <!-- SIDEBAR SEARCHBAR -->
+                <div class="sidebar-searchbar">
+                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+                </div>
+                
+                <!-- SIDEBAR CONTACTS -->
+                <div class="sidebar-contacts">
+                    <div class="contact" v-for="elements in contacts">
+                        <div class="contact-img">
+                            <img :src="elements.avatar">
+                        </div>
+                        <div class="contact-text">
+                            <div class="contact-name">
+                                <p>{{elements.name}}</p>
+                            </div>
+                            <div class="contact-messages">
+                                <p>{{elements.messages[elements.messages.length - 1].text}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
 
