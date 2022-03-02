@@ -45,7 +45,7 @@
                 
                 <!-- SIDEBAR CONTACTS -->
                 <div class="sidebar-contacts">
-                    <div class="contact" v-for="elements in contacts">
+                    <div class="contact" v-for="elements in contacts" @click="selectContact(elements)" :class="activeContact === elements ? 'active' : '' ">
                         <div class="contact-img">
                             <img :src="elements.avatar">
                         </div>
@@ -68,14 +68,14 @@
 
                     <div class="chat-user-details">
                         <div class="chat-user-propic">
-                            <img src="img/propic1.png">
+                            <img :src="activeContact.avatar">
                         </div>
                         <div class="chat-user-text">
                             <div class="chat-user-name">
-                               <p>Floriana</p>
+                               <p>{{ activeContact.name }}</p>
                             </div>
                             <div class="chat-user-last-access">
-                                <p>Ultimo accesso 28/02/2022 12:07</p>
+                                <p>Ultimo accesso </p>
                             </div>
                         </div>
                     </div>
@@ -96,11 +96,9 @@
 
                 <!-- CHAT MAIN -->
                 <div class="chat-main">
-                    <div class="chat-baloon sent">
-                        <p>Sent (mettilo a destra )</p>
-                    </div>
-                    <div class="chat-baloon recived">
-                        <p>Recived (Bianco a sinistra)</p>
+                    <div v-for="elements in activeContact.messages" class="chat-baloon" :class="elements.status">
+                        <p> {{ elements.text}} </p>
+                        <h6 class="msg-date"> {{ getHours ( elements.date ) }}</h6>
                     </div>
                 </div>
 
@@ -110,7 +108,7 @@
                         <i class="fa-solid fa-face-grin-beam"></i>
                     </div>
                     <div class="chat-input-text">
-                        <input type="text" placeholder="Scrivi un messaggio">
+                        <input v-model="newMessage" type="text" placeholder="Scrivi un messaggio" @keyup.enter="send">
                     </div>
                     <div class="chat-vocal-msg">
                         <i class="fa-solid fa-microphone"></i>

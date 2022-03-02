@@ -113,6 +113,7 @@ const app = new Vue(
             ],
 
             activeContact: null,
+            newMessage: '',
 
         },
         methods: {
@@ -130,14 +131,15 @@ const app = new Vue(
                 const date= new Date ();
                 const sendMessage= {
                     status: 'sent',
-                    message: this.newMessage,
+                    text: this.newMessage,
                     date: ` ${date.getHours()}:${date.getMinutes()} ` 
                 }
-                
-                console.log(sendMessage);
+
+                this.activeContact.messages.push( sendMessage );
+
+                this.newMessage= '';
             },
         },
-
 
         created() {
             this.selectContact( this.contacts[0] );
