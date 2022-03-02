@@ -138,6 +138,22 @@ const app = new Vue(
                 this.activeContact.messages.push( sendMessage );
 
                 this.newMessage= '';
+
+                setTimeout ( ()=> {
+                    this.replyMsg(this.activeContact); 
+                } ,2000 ) ;
+                console.log(this.activeContact)
+            },
+
+            replyMsg: function(){
+                const date= new Date ();
+                const replyMessage= {
+                    status: 'recived',
+                    text: 'Va bene',
+                    date: ` ${date.getHours()}:${date.getMinutes()} ` 
+                }
+
+                this.activeContact.messages.push( replyMessage );
             },
         },
 
