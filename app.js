@@ -114,8 +114,10 @@ const app = new Vue(
 
             activeContact: null,
             newMessage: '',
+            search: '',
 
         },
+
         methods: {
             selectContact: function(contact){
                 this.activeContact= contact;
@@ -159,7 +161,8 @@ const app = new Vue(
 
         created() {
             this.selectContact( this.contacts[0] );
-        }
+        },
+        
            
 
 

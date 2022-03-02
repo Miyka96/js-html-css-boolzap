@@ -40,7 +40,8 @@
     width: 100%;
     height: 10%;
     border-top-left-radius: 10px;
-    background-color: antiquewhite;
+    background-color: rgb(40, 80, 63);
+    color: white;
     display: flex;
     padding: 5px;
 }
@@ -67,10 +68,6 @@
     margin-left: 3px;
     font-size: 16px;
     font-weight: 500;
-    cursor: pointer;
-}
-.username:hover{
-    color: #114543;
 }
 
 .nav-icons-wrapper, .chat-icons-wrapper{
@@ -85,7 +82,7 @@
 .nav-icons, .chat-icons, .chat-emoji, .chat-vocal-msg{
     font-size: 15px;
     cursor: pointer;
-    color: #0c2c2b;
+    color: white;
 }
 .nav-icons:hover,.chat-icons:hover, .chat-emoji:hover, .chat-vocal-msg:hover {
     color: rgb(89, 109, 99);
@@ -101,14 +98,18 @@ input[type="text"]{
     width: 100%;
     height: 100%;
     border: none;
+    background-color: rgb(63, 76, 77);
+    color: white;
+    font-weight: 500;
 }
 
 /* SIDEBAR CONTACTS------------------------------ */
 .sidebar-contacts{
     flex-grow: 1;
-    background-color: rgb(252, 252, 240);
+    background-color: rgb(42, 49, 49);
     width: 100%;
     border-bottom-left-radius: 10px;
+    color: white;
 }
 .contact{
     width: 100%;
@@ -117,9 +118,10 @@ input[type="text"]{
     display: flex;
     align-items: center;
     gap: 15px;
+    cursor: pointer;
 }
 .contact:hover{
-    background-color: rgb(185, 230, 230);
+    background-color: rgb(50, 65, 65);
 }
 .contact-img{
     width: 45px;
@@ -163,7 +165,8 @@ input[type="text"]{
     width: 100%;
     height: 10%;
     border-top-right-radius: 10px;
-    background-color: antiquewhite;
+    background-color: rgb(40, 80, 63);
+    color: white;
     display: flex;
     align-items: center;
     padding: 5px;
@@ -188,16 +191,17 @@ input[type="text"]{
 /* CHAT MAIN ----------------------------------*/
 .chat-main{
     flex-grow: 1;
-    background-color: rgb(129, 158, 158);
+    background-color: rgb(24, 27, 27);
     width: 100%;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 15px;
+    border-left: rgb(250, 208, 72) solid 1px;
 }
 .chat-baloon{
-    background-color: rgb(246, 252, 206);
+    background-color: rgb(253, 241, 201);
     padding: 10px 20px;
     width: 50%;
     font-size: 11px;
@@ -207,7 +211,7 @@ input[type="text"]{
 
 .sent{
     align-self: flex-end;
-    background-color: #caebe9;
+    background-color: #caebd7;
 }
 
 /* CHAT INPUT TEXT --------------------------*/
@@ -219,7 +223,8 @@ input[type="text"]{
     justify-content: center;
     align-items: center;
     padding: 15px;
-    background-color: antiquewhite;
+    background-color: rgb(40, 80, 63);
+    border-left: rgb(250, 208, 72) solid 1px;
 }
 .chat-input-text{
     flex-grow: 1;
@@ -227,7 +232,7 @@ input[type="text"]{
 }
 
 .active{
-    background-color: rgb(185, 230, 230);
+    background-color: rgb(50, 65, 65);
 }
 .msg-date{
     font-size: 10px;
