@@ -162,6 +162,19 @@ const app = new Vue(
         created() {
             this.selectContact( this.contacts[0] );
         },
+
+        computed: {
+            filteredContacts() {
+                let filterContacts= this.contacts
+
+                if(this.search != '' && this.search) {
+                    filterContacts = filterContacts.filter((item) => {
+                        return item.name.toLowerCase().includes(this.search.toLowerCase())
+                    })
+                }
+                return filterContacts;
+            }
+        },
         
            
 

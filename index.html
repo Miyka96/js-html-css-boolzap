@@ -40,7 +40,7 @@
 
                 <!-- SIDEBAR SEARCHBAR -->
                 <div class="sidebar-searchbar">
-                    <input v-model="search" type="text" placeholder="Cerca o inizia una nuova chat">
+                    <input v-model="search" type="text" placeholder="Cerca o inizia una nuova chat" @keyup="filteredContacts">
                 </div>
                 
                 <!-- SIDEBAR CONTACTS -->
