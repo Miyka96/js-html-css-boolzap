@@ -21,7 +21,7 @@
     height: 80vh;
     min-height: 350px;
     border-radius: 10px;
-    border: 1px solid rgb(250, 208, 72);
+    border: 1px solid white;
     display: flex;
 }
 /* SIDEBAR */
@@ -40,7 +40,7 @@
     width: 100%;
     height: 10%;
     border-top-left-radius: 10px;
-    background-color: rgb(40, 80, 63);
+    background-color: #3875C3;
     color: white;
     display: flex;
     padding: 5px;
@@ -98,15 +98,15 @@ input[type="text"]{
     width: 100%;
     height: 100%;
     border: none;
-    background-color: rgb(63, 76, 77);
-    color: white;
+    background-color: rgb(209, 236, 227);
+    color: black;
     font-weight: 500;
 }
 
 /* SIDEBAR CONTACTS------------------------------ */
 .sidebar-contacts{
     flex-grow: 1;
-    background-color: rgb(42, 49, 49);
+    background-color: rgb(49, 49, 49);
     width: 100%;
     border-bottom-left-radius: 10px;
     color: white;
@@ -121,7 +121,7 @@ input[type="text"]{
     cursor: pointer;
 }
 .contact:hover{
-    background-color: rgb(50, 65, 65);
+    background-color: #82b8ff65;
 }
 .contact-img{
     width: 45px;
@@ -146,7 +146,7 @@ input[type="text"]{
 .contact-messages, .chat-user-last-access{
     font-size: 12px;
     font-weight: 400;
-    color: grey;
+    color: white;
 }
 
 /* CHAT ------------------------------------ */
@@ -165,7 +165,7 @@ input[type="text"]{
     width: 100%;
     height: 10%;
     border-top-right-radius: 10px;
-    background-color: rgb(40, 80, 63);
+    background-color: #3875C3;
     color: white;
     display: flex;
     align-items: center;
@@ -198,10 +198,10 @@ input[type="text"]{
     flex-direction: column;
     gap: 10px;
     padding: 15px;
-    border-left: rgb(250, 208, 72) solid 1px;
+    border-left: rgb(100, 100, 100) solid 1px;
 }
 .chat-baloon{
-    background-color: rgb(253, 241, 201);
+    background-color: #b7d2fd;
     padding: 10px 20px;
     width: 50%;
     font-size: 11px;
@@ -211,7 +211,7 @@ input[type="text"]{
 
 .sent{
     align-self: flex-end;
-    background-color: #caebd7;
+    background-color: #ceffce;
 }
 
 /* CHAT INPUT TEXT --------------------------*/
@@ -223,8 +223,10 @@ input[type="text"]{
     justify-content: center;
     align-items: center;
     padding: 15px;
-    background-color: rgb(40, 80, 63);
+    background-color: #3875C3;
     border-left: rgb(250, 208, 72) solid 1px;
+    border-bottom-right-radius: 10px;
+
 }
 .chat-input-text{
     flex-grow: 1;
@@ -232,7 +234,7 @@ input[type="text"]{
 }
 
 .active{
-    background-color: rgb(50, 65, 65);
+    background-color: #82b8ff65;
 }
 .msg-date{
     font-size: 10px;

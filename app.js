@@ -175,9 +175,6 @@ const app = new Vue(
                 return filterContacts;
             }
         },
-        
-           
-
 
     }
 )
