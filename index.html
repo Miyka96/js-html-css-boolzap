@@ -45,7 +45,7 @@
                 
                 <!-- SIDEBAR CONTACTS -->
                 <div class="sidebar-contacts">
-                    <div class="contact" v-for="elements in contacts" @click="selectContact(elements)" :class="activeContact === elements ? 'active' : '' ">
+                    <div class="contact" v-for="elements in filteredContacts" @click="selectContact(elements)" :class="activeContact === elements ? 'active' : '' ">
                         <div class="contact-img">
                             <img :src="elements.avatar">
                         </div>
